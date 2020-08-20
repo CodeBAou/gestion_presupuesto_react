@@ -10,13 +10,13 @@ const Gastos = ({restante, Presupuesto, SetPresupuesto, setRestante}) => {
 
     const ChangeData = (e) => {
         
-        switch(e.target.name){
+        switch(e.target.name)
+        {
             case 'nombre_gasto':
                 SetGastoNombre(e.target.value);
                 break;
             case 'valor_gasto':
                 SetGastoValor(e.target.value);
-                console.log('valor: '+gastos);
                 break;
         }
     }
@@ -24,16 +24,20 @@ const Gastos = ({restante, Presupuesto, SetPresupuesto, setRestante}) => {
     const SaveGasto = (e) => {
 
         e.preventDefault();
-
         let resta=restante-gastoValor;
+
         //Cambia el color a blanco[ >1/2 ] - amarrillo[ >1/3 & <= 1/2 ] o rojo[ <= 1/3 ]
-        if(resta<=Presupuesto/2&&resta>Presupuesto/3){
+        if(resta<=Presupuesto/2&&resta>Presupuesto/3)
+        {
             document.getElementById('dato_restanteID').style.color="yellow";
-        }else if(resta<=Presupuesto/3){
+        }
+        else if(resta<=Presupuesto/3)
+        {
             document.getElementById('dato_restanteID').style.color="red";
         }
         //Asigna Nombre por defecto al gasto si el usuario no puso ninguno
-        if(gastoNombre == '' ||gastoNombre == null || gastoNombre == undefined){
+        if(gastoNombre == '' ||gastoNombre == null || gastoNombre == undefined)
+        {
             SetGastoNombre('Otro Gasto');
         }
 
@@ -53,11 +57,13 @@ const Gastos = ({restante, Presupuesto, SetPresupuesto, setRestante}) => {
             <div className="content_Set_Gasto">
 
                 <form className="fgastos" onSubmit={SaveGasto}>
+
                     <label className="labelGastos">Nombre Gasto</label>
                     <input name="nombre_gasto" className="inputGastos" type="text" onChange={ChangeData}/>
                     <label className="labelGastos">Cantidad Gasto</label>
                     <input name="valor_gasto" className="inputGastos" type="text" onChange={ChangeData}/>
                     <input className="inputGastosBTN" type="submit" value="Añadir gasto"/>
+
                 </form>
 
             </div>
@@ -65,10 +71,12 @@ const Gastos = ({restante, Presupuesto, SetPresupuesto, setRestante}) => {
             <div className="content_List_Gasto">
 
                 <div className="balance">
+
                     <label className="data">Total</label>
                     <label className="data">Restante</label>
                     <label className="data green">{Presupuesto}</label>
                     <label className="data" id="dato_restanteID">{restante}</label>
+
                 </div>
 
                 <div className="Listado">
