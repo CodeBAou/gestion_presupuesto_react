@@ -6,6 +6,7 @@ Esta Api se hizo con el proposito de poner en practica lo aprendido en un curso 
 Se requiere node para ejecutar este proyecto [Descargar](https://nodejs.org/es/).
 
 ```
+   git clone https://github.com/CodeBAou/gestion_presupuesto_react.git
    cd gestion_presupuesto_react
    gestion_presupuesto_react> npm install
    gestion_presupuesto_react> npm start
