@@ -1,4 +1,4 @@
-Esta Api se hizo con el proposito de poner en practica lo aprendido en un curso de React y se almacena como muestra para el CV.
+Práctica de un curso de react. Gestiona el presupuesto semanal y lista los gatos.
 
   1. Insertas el presupuesto de la semana (Componente1).
   2. Puedes ir almacenando gastos que se irán listando (Lista de Componentes3), mientras se calcula el saldo restante (Componente2).
